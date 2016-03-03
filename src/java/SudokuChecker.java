@@ -3,7 +3,7 @@ import java.util.stream.*;
 
 public class SudokuChecker{
     private Set validSudokuNumbers = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9)
-            .collect(Collectors.toSet());;
+            .collect(Collectors.toSet());
 
 
     public boolean CheckIsValid(int[][] board)
