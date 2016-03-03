@@ -39,6 +39,7 @@ public class SudokuChecker{
         for(int top = 0; top < 3; top++)
             for(int left = 0; left < 3; left++)
                 squares.add(getSquare(top * 3, left * 3, board));
+
         return squares;
     }
 
@@ -46,12 +47,9 @@ public class SudokuChecker{
     {
         List<Integer> collector = new LinkedList<Integer>();
         for(int x = left; x < left + 3; x++)
-        {
             for(int y = top; y < top + 3; y++)
-            {
                 collector.add(board[y][x]);
-            }
-        }
+
         return collector;
     }
 
@@ -59,12 +57,9 @@ public class SudokuChecker{
     {
         int [][] transposedBoard = new int[9][9];
         for(int r = 0; r < 9; r++)
-        {
             for(int c = 0; c < 9; c++)
-            {
                 transposedBoard[c][r] = board[r][c];
-            }
-        }
+
         return transposedBoard;
     }
 
