@@ -2,22 +2,9 @@ import java.util.*;
 import java.util.stream.*;
 
 public class SudokuChecker{
-    private Set validSudokuNumbers;
+    private Set validSudokuNumbers = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9)
+            .collect(Collectors.toSet());;
 
-    public SudokuChecker()
-    {
-        //There must be a more concise way to do this
-        validSudokuNumbers = new HashSet();
-        validSudokuNumbers.add(1);
-        validSudokuNumbers.add(2);
-        validSudokuNumbers.add(3);
-        validSudokuNumbers.add(4);
-        validSudokuNumbers.add(5);
-        validSudokuNumbers.add(6);
-        validSudokuNumbers.add(7);
-        validSudokuNumbers.add(8);
-        validSudokuNumbers.add(9);
-    }
 
     public boolean CheckIsValid(int[][] board)
     {
